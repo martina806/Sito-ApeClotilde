@@ -26,9 +26,9 @@ function topFunction() {
 document.getElementById('changeStyleButton').addEventListener('click', function() {
     var stylesheet = document.getElementById('stylesheet');
     var currentHref = stylesheet.getAttribute('href');
-    if (currentHref === 'storia.css') {
-        stylesheet.setAttribute('href', 'storia_dark.css');
+    if (currentHref === '../ALL/storia.css') {
+        stylesheet.setAttribute('href', '../ALL/storia_dark.css');
     } else {
-        stylesheet.setAttribute('href', 'storia.css');
+        stylesheet.setAttribute('href', '../ALL/storia.css');
     }
 });

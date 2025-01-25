@@ -75,10 +75,10 @@ function topFunction() {
 document.getElementById('changeStyleButton').addEventListener('click', function() {
     var stylesheet = document.getElementById('stylesheet');
     var currentHref = stylesheet.getAttribute('href');
-    if (currentHref === 'home.css') {
-        stylesheet.setAttribute('href', 'home_dark.css');
+    if (currentHref === '../ALL/home.css') {
+        stylesheet.setAttribute('href', '../ALL/home_dark.css');
     } else {
-        stylesheet.setAttribute('href', 'home.css');
+        stylesheet.setAttribute('href', '../ALL/home.css');
     }
 });
 
