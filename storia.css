@@ -1,0 +1,1016 @@
+body {
+  font-family: 'Avenir', 'Gill Sans', 'Trebuchet MS', 'Arial', sans-serif;
+  
+}
+/*  */
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* BARRA DEL MENU */
+
+.container-menu {
+  position: relative;
+}
+
+.bg-img {
+  max-height: 50em;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  object-fit: cover; /* per mantenere le proporzioni */
+  object-position: center;
+  z-index: 0;
+}
+
+#barra {
+  box-shadow: 3px 3px 3px -1px rgba(17,30,71,.15);
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6.25em;
+  z-index: 1000;
+  display: block;
+  
+}
+
+#barra-menu {
+  max-width: 68.75em;
+  height: 6.25em;
+  margin: 0 auto;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#logo-menu {
+  margin: 0 auto;
+  position: relative;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  height: 6.25em;
+}
+
+#logo {
+  display: block;
+  height: 5.625em;
+  cursor: pointer;
+  object-fit: cover; /* per mantenere le proporzioni */
+  position: relative;
+  top: 10%;
+}
+
+#sezioni-menu {
+  flex-grow: 1;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-right: 1em;
+}
+
+#sezioni-menu-vere {
+  flex-grow: 1;
+  justify-content: flex-end;
+  display: flex!important;   /* DA CONTROLLARE COSA è*/
+  height: inherit;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+#sezioni-menu-vere-lista {
+  margin: 0;
+  padding: 0;
+  align-content: stretch;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  display: flex;
+  list-style-type: none;
+  padding-inline-start: 2.5em;
+
+}
+
+.elenco-menu {
+  align-content: stretch;
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: match-parent;
+  list-style-type: none;
+  margin-top: 0.9375em;
+  margin-bottom: 0.9375em;
+  transition: margin-bottom 0.3s;
+  float: left;
+  
+}
+
+.elenco-menu-link {
+  border-bottom: 0.625em solid white;
+  border-top: 0.625em solid white;
+  color: #3c3e3f;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  line-height: 13px;
+  margin: 0 6px;
+  padding: 0 6px;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: match-parent;
+  list-style-type: none;
+  position: relative;
+  transition: margin-bottom 0.3s;
+  
+}
+.elenco-menu-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  bottom: -1.5625em; 
+  height: 0.625em; 
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.elenco-menu-link:hover {
+  color: #ffbb00;
+}
+
+.elenco-menu-link:hover::after {
+  background-color: #ffbb00;
+}
+
+.elenco-menu:hover .elenco-menu-sub {
+  display: block;
+}
+
+.elenco-menu-sub {
+  display: none;
+  position: absolute;
+  top: 6.25em;
+  margin-left: 0.3125em;
+  background-color: white;
+  min-width: 10em;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.elenco-menu-sub a {
+  float: none;
+  color: black;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.elenco-menu-sub a:hover {
+  background-color: #ffbb00;
+  color: white;
+}
+
+.sezioni-menu-donaora {
+  align-content: stretch;
+  align-items: stretch;
+  flex-wrap: wrap;
+  background-color:#ffbb00;
+  transition: all .2s ease;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.sezioni-menu-donaora-link {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 1.1875em;
+  letter-spacing: 1.6px;
+  padding: 0 1.125em;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 0.8125em;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sezioni-menu-donaora-link:hover {
+  background-color: #ffa600;
+}
+
+
+#introduzione {
+  position: absolute;
+  background-color: rgba(6, 97, 6, 0.75);
+  color: white;
+  z-index: 999;
+  max-width: 29em;
+  max-height: 31.25em;
+  padding: 0.9375em;
+  bottom: 9em;
+  left: 6em;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.intro-donaora {
+  width: 11em;
+  height: 3.75em;
+  margin-left: 0;
+  font-size: 0.7em;
+}
+
+
+
+
+/* NOTTE CAMBIO DI STILE */
+#changeStyleButton {
+  width: 3em;
+  height: 3em;
+  position: fixed;
+  top: 2.5em;
+  right: 16em;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+#changeStyleButton img {
+  width: 5em;
+  height: 5em;
+  position: fixed;
+  top: 1.8em;
+  right: 15em;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+#changeStyleButton img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+
+
+
+/* SLIDESHOW INIZIALE */
+.progetti {
+  width: 80%;
+  height: 37.5em;
+  background-color: transparent;
+  margin: auto;
+  padding: 1.875em;
+  border: 3.125em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-slideshow {
+  max-width: 33.125em;
+  max-height: 25.75em;
+  flex-direction: column;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px 5px rgba(17,30,71,.15);
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  z-index: 3;
+}
+
+.mySlides img {
+  width: 100%;
+  z-index: 3;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  
+
+  border-radius: 50%;
+  -webkit-user-select: none; /*il testo all'interno del <div> non sia selezionabile*/
+  font-weight: bold;
+  font-size: 3em;    
+  user-select: none; 
+  z-index: 3;
+  margin-right: -0.5em;
+  margin-left: -0.6em;
+}
+
+.next {
+  right: 50%;
+  z-index: 3;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  
+  color: black;
+}
+
+/* Container for image text
+.caption-container {
+  text-align: center;
+  width: 100%;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white; 
+} */
+
+/* regola clearfix per contenere elementi flottanti in un contenitore ed evitare problemi di layout*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+/* PARTE DI STORIA DI FIANCO ALLO SLIDESHOW */
+.storia-container {
+  flex-direction: column;
+  width: 33.125em;
+  height: 24.375em;
+  background-color: transparent;
+  margin: 2.5em;
+  padding: 0.625em;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+}
+.storia-titolo {
+  margin: 0.625em;
+  z-index: 3;
+  color: white;
+  font-weight: bolder;
+}
+
+.barra-colorata {
+  background-color: #ffbb00;
+  margin: 0.625em;
+  height: 0.5em;
+  z-index: 3;
+}
+
+.storia-testo {
+  margin: 0.625em;
+  z-index: 3;
+  color: white;
+}
+
+
+/* BOTTONE LEGGI DI PIU */
+.btn-leggi {
+  border-radius: 0.25em;
+  background-color: #ffbb00;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  padding: 1.25em;
+  width: 12.5em;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0.3125em;
+}
+
+.btn-leggi span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-family: 'Avenir', 'Gill Sans', 'Trebuchet MS', 'Arial', sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.btn-leggi span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -1.25em;
+  transition: 0.5s;
+}
+
+.btn-leggi:hover span {
+  padding-right: 1.5625em;
+}
+
+.btn-leggi:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/* PROGETTI IN AFRICA */
+.barra-grande {
+  width: 100%;
+  height: 27.5em;
+  background-color: rgb(6, 97, 6);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
+}
+
+#barra-grande-verticale {
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: auto;
+  border: 3.125em;
+  z-index: 0;    
+}
+
+.titoletto-pre {
+  width: 80%;
+  margin-top: 4em;
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto; 
+  padding-bottom: 0.4em;
+  color: #ffbb00;
+  font-weight: bold;
+}
+
+.titoletto-pre-storia {
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto; 
+  padding-bottom: 0.4em;
+  color: #ffbb00;
+}
+
+.titolo_prog {
+  background-color: transparent;
+  width: 80%;
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5em;  
+  padding-bottom: 0.4em;
+  font-weight: 550;
+  
+} 
+
+.barra-colorata-titoletti {
+  background-color: #ffbb00;
+  margin-left: 10%;
+  margin-bottom: 1em;
+  height: 0.7em;
+  width: 20%;
+  z-index: 3;
+}
+
+.prog_singolo {
+  height: 37.5em;
+  width: 30%;
+  background-color: transparent;
+  margin: 0.9375em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.prog_1_img {
+  background-color: transparent;
+  width: 100%;
+  height: 15.625em;
+  overflow: hidden;
+}
+
+.prog_1_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* per mantenere le proporzioni */
+  object-position: center;
+}
+
+.prog_1_scritte {
+  background-color: whitesmoke;
+  width: 85%;
+  height: 21.875em;
+  position: relative;
+  bottom: 5%;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  transition: transform 0.4s ease;
+}
+
+.prog_1_scritte:hover {
+  transform: scale(1.05, 1.05);
+  background-color: #ffbb00;
+  cursor: pointer;
+}
+
+.barra-colorata-prog {
+  background-color: #ffbb00;
+  height: 0.7em;
+  width: 100%;
+  z-index: 3;
+  position: relative;
+  top: 21.25em;
+}
+
+.prog-singolo-titolo {
+  color: black;
+  margin: 4%;
+  font-weight: bold;
+}
+
+.prog-singolo-testo {
+  color: black;
+  margin: 4%;
+}
+
+
+/* SCROLL BACK TO TOP */
+#myBtn {
+  display: none; /* nascosto di default */
+  position: fixed; 
+  bottom: 30px; 
+  right: 40px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #ffbb00; 
+  color: rgb(0, 0, 0); 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 30%; 
+  font-size: 18px; 
+  font-weight: bold;
+}
+
+#myBtn:hover {
+  background-color: rgb(213, 193, 18); 
+}
+
+
+
+
+/* CONSIGLIO DIRETTIVO */
+.contenitore-persona {
+  position: relative;
+  vertical-align: middle;
+  width: 19em;
+  height: 21em;
+  border-radius: 50%;
+  margin: 0.625em;
+}  
+
+.persona {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* per mantenere le proporzioni */
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.contenitore-persona:hover .overlay {
+  opacity: 1;
+}
+
+.text-overlay {
+  color: rgb(0, 0, 0);
+  font-size: 1.7em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+  width: 12em;
+}
+
+
+.consiglio-tit {
+  background-color: rgb(6, 97, 6);
+}
+
+
+
+
+/* AIUTARE DONA*/
+.contributo {
+  height: 10em;
+  width: 25%;
+  background-color: #ffbb00;
+  margin: 2.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: background-color 0.4s ease;
+  transition: transform 0.4s ease;
+}
+
+.contributo:hover {
+  transform: scale(1.08, 1.08);
+  background-color: #ffa600;
+}
+
+.prog-contributo {
+  height: 18em;
+}
+
+.icon-cont {
+  position: relative;
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  left: 70%;
+  z-index: 5;
+  box-shadow: 5px 5px 5px 5px rgba(17,30,71,.15);
+}
+
+.icon-freccia {
+  position: relative;
+  left: 42%;
+  top: 4em;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+}
+
+.cont-scritta {
+  position: relative;
+  text-align: center;
+  left: 20%;
+  font-weight: 300;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+
+
+/* FOOTER  */
+.footer {
+  width: 100%;
+  border: 0.625em;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(6, 97, 6);
+  margin-top: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.footer-1 {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  right: 2em;
+  position: relative;
+}
+
+.footer-1 img {
+  height: 7em;
+  width:14em;
+  flex-direction: column;
+  object-fit: cover; /* per mantenere le proporzioni */
+  object-position: center;
+}
+
+.vertical-bar {
+  width: 0.25em;
+  height: 14em;
+  background-color: white;
+  position: relative;
+  left: -2%;
+}
+
+.footer-2 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  flex-direction: row;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  width: max-content;
+}
+
+.footer-social {
+  flex-direction: column;
+}
+
+.footer-social-icona img {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.footer-social-icona img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.footer-menu {
+  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.3em;
+}
+
+
+.ff {
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  width:max-content;
+}
+
+.footer-3 {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  position: relative;
+  left: 5%;
+}
+
+.elenco-footer {
+  padding-left: 1.3em;
+  padding-top: 0.3em;
+}
+
+.v2 {
+  position: relative;
+  left: 2%;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer a:hover {
+  color: #ffbb00;
+}
+
+.footer-3 img {
+  width: 2.8em;
+  height: 2.8em;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  margin-right: 0.6em;
+  border-radius: 50%;
+}
+
+
+
+
+/* PAGINA STORIA  */
+.bg-img-storia {
+    max-height: 45em;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    object-fit: cover; /* per mantenere le proporzioni */
+    object-position: center;
+    z-index: 0;
+}
+
+#introduzione-storia {
+    position: absolute;
+    background-color: rgba(6, 97, 6, 1);
+    color: white;
+    font-weight: bold;
+    z-index: 999; 
+    padding: 1.5em;
+    bottom: -3em;
+    left: 15%;
+    right: 15%;
+}
+
+.titolo-intro-storia {
+    font-size: 3em;
+    text-align: center;
+}
+
+.testo-intro-storia {
+    font-size: 1.2em;
+}
+
+.testo-storia {
+    padding-left: 16em;
+    padding-right: 16em;
+    padding-top: 5em;
+    color: black;
+}
+
+.cultura {
+    width: 70%;
+    margin: auto;
+    border: 3.125em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.cultura-testo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+}
+
+.bullet-list {
+    list-style-type: circle;
+}
+
+
+
+
+
+
+  /* PAGINA PROGETTI AFRICA */
+  .row {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 6em;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; 
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    border: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  div.gallery {
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+  }
+  
+  div.gallery:hover {
+    border: 5px solid green;
+  }
+  
+  div.gallery.img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+}
+
+
+
+/* PAGINA CONTATTI  */
+.contatti-titolo {
+    width: 90%;
+    margin: auto;  
+    padding-top: 6em; 
+  }
+
+  .contatti-testo {
+    align-items: normal;
+    width: auto;
+    color: white;
+  }
+
+  .contatti-barra {
+    background-color: rgb(6, 97, 6); 
+    height: 42em;
+  }
+
+  .titolo_prog-contatti  {
+    color: white;
+  }
+
+
+  
